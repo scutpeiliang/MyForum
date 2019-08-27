@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cris.dao.TabDao" >
+
+    <!--查询所有板块-->
+    <resultMap id="allTabs" type="tab">
+        <id property="id" column="id"></id>
+        <result property="tabName" column="tab_name"></result>
+    </resultMap>
+    <select id="selectAllTabs" resultMap="allTabs">
+        select id, tab_name from tab
+    </select>
+
+</mapper>
