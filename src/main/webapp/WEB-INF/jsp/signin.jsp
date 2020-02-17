@@ -74,23 +74,25 @@
 <div class="panel panel-default" id="login" style="width: 20%;margin-left: 40%;margin-top: 5%;margin-bottom: 5%">
     <div class="panel-heading" style="background-color: #fff">
         <h3 class="panel-title">登录</h3>
+        <span style="color: red">${signInMessage}</span>
+        <span style="color: red">${signUpMessage}</span>
     </div>
     <div class="panel-body">
         <form method="post" action="/user/signIn" id="signInForm">
-        <div class="form-group">
-            <label for="username">用户名</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名" required="required">
-        </div>
-        <div class="form-group">
-            <%--@declare id="password"--%><label for="password">密码</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码" required="required">
-        </div>
-        <div class="checkbox text-left">
-            <label>
-                <input type="checkbox" id="auto" name="auto" value="1">自动登录
-            </label>
-        </div>
-        <p style="text-align: right;color: red;position: absolute" id="info"></p><br/>
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名" required="required">
+            </div>
+            <div class="form-group">
+                <%--@declare id="password"--%><label for="password">密码</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码" required="required">
+            </div>
+            <div class="checkbox text-left">
+                <label>
+                    <input type="checkbox" id="auto" name="auto" value="1">自动登录
+                </label>
+            </div>
+            <p style="text-align: right;color: red;position: absolute" id="info"></p><br/>
             <button class="btn btn-success btn-block" id="submit">登录</button>
         </form>
     </div>

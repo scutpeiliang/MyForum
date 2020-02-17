@@ -28,7 +28,7 @@
         left join reply r
         on t.id = r.topic_id
         group by t.id
-        order by t.update_time
+        order by t.create_time
         desc
     </select>
 

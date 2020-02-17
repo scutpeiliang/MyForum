@@ -12,7 +12,7 @@
         function deleteOrNot(topicId, id){
             var choice = confirm("确定删除吗?");
             if(choice == true){
-                window.location.href = "/admin/deleteOneReply?topicId="+topicId+"&id="+id;
+                window.location.href = "/admin/check/deleteOneReply?topicId="+topicId+"&id="+id;
             }
         }
     </script>

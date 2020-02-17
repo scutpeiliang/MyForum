@@ -36,6 +36,10 @@
             <mvc:mapping path="/user/signIn"/>
             <bean class="com.cris.interceptor.LoginLogInterceptor"></bean>
         </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/admin/check/**"/>
+            <bean class="com.cris.interceptor.AdminInterceptor"></bean>
+        </mvc:interceptor>
     </mvc:interceptors>
 
     <!--配置文件上传-->

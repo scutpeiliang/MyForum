@@ -5,6 +5,7 @@ import com.cris.service.UserService;
 import com.cris.utils.ProduceMD5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -45,7 +46,7 @@ public class UserController {
      * 完成用户注册
      */
     @RequestMapping("/signUp")
-    public void signUp(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String signUp(HttpServletRequest request, HttpServletResponse response, Model model) throws ServletException, IOException {
         //创建User对象，完善用户信息
         User user = new User();
         user.setUsername(request.getParameter("username"));
@@ -64,13 +65,13 @@ public class UserController {
         response.setContentType("text/html;charset=utf-8");
         //注册成功
         if(result){
-            response.getWriter().write("<a href=\"/signIn\">注册成功，点我登录</a><br/>");
-            response.getWriter().write("<a href=\"/\">首页</a>");
+            model.addAttribute("signUpMessage", "注册成功，欢迎登录发言！");
+            return "signin";
         }
         //注册失败
         else{
-            response.getWriter().write("<a href=\"/signUp\">注册失败，点我重试</a><br/>");
-            response.getWriter().write("<a href=\"/\">首页</a>");
+            model.addAttribute("signUpMessage", "注册失败，请重试！");
+            return "signup";
         }
     }
 
@@ -78,7 +79,7 @@ public class UserController {
      * 完成用户登录
      */
     @RequestMapping("/signIn")
-    public void signIn(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String signIn(HttpServletRequest request, HttpServletResponse response, Model model) throws ServletException, IOException {
         //封装用户信息，进行登录
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -102,14 +103,12 @@ public class UserController {
             }
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
-            response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write("<a href=\"/\">登录成功，点我回首页</a>");
+            return "redirect:/";
         }
         else{
             //登录失败
-            response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write("<a href=\"/signIn\">登录失败，用户名或密码错误，点我重试</a><br/>");
-            response.getWriter().write("<a href=\"/\">首页</a>");
+            model.addAttribute("signInMessage", "登录失败，用户名或密码错误，请重试！");
+            return "signin";
         }
     }
 

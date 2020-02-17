@@ -16,7 +16,7 @@
 			function deleteOrNot(tabName){
 				var choice = confirm("确定删除吗?");
 				if(choice == true){
-					window.location.href = "/admin/deleteOneTab?tabName="+tabName;
+					window.location.href = "/admin/check/deleteOneTab?tabName="+tabName;
 				}
 			}
 	</script>
@@ -51,7 +51,7 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="25%">${tab.id }</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="30%"><a href="/admin/listTopicsOfTab?tabName=${tab.tabName}">${tab.tabName}</a></td>
+										width="30%"><a href="/admin/check/listTopicsOfTab?tabName=${tab.tabName}">${tab.tabName}</a></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="30%">${tab.tabNameEn}</td>
 									<td align="center" style="HEIGHT: 22px">

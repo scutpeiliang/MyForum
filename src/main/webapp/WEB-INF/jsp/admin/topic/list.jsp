@@ -12,7 +12,7 @@
         function deleteOrNot(id){
             var choice = confirm("确定删除吗?");
             if(choice == true){
-                window.location.href = "/admin/deleteOneTopic?id="+id;
+                window.location.href = "/admin/check/deleteOneTopic?id="+id;
             }
         }
     </script>
@@ -47,7 +47,7 @@
                         <td style="CURSOR: hand; HEIGHT: 22px" align="center"
                             width="10%">${topic.localCreateTime}</td>
                         <td style="CURSOR: hand; HEIGHT: 22px" align="center"
-                            width="15%"><a href="/admin/listRepliesOfTopic?topicId=${topic.id}">${topic.title}</a></td>
+                            width="15%"><a href="/admin/check/listRepliesOfTopic?topicId=${topic.id}">${topic.title}</a></td>
                         <td style="CURSOR: hand; HEIGHT: 22px" align="center"
                             width="40%">${topic.content}</td>
                         <td style="CURSOR: hand; HEIGHT: 22px" align="center"

@@ -23,9 +23,9 @@
                         d = new dTree('d');
                         d.add('0',-1,'后台管理系统');
                         d.add('01',0,'管理选项');
-                        d.add('011','01','板块与帖子管理','/admin/listAllTabs');
-                        d.add('012','01','用户管理','/admin/listAllUsers');
-                        d.add('013','01','登录日志','/admin/listLog');
+                        d.add('011','01','板块与帖子管理','/admin/check/listAllTabs');
+                        d.add('012','01','用户管理','/admin/check/listAllUsers');
+                        d.add('013','01','登录日志','/admin/check/listLog');
                         document.write(d);
                     </script>
                 </div>

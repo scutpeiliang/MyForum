@@ -50,17 +50,17 @@
         尽情交流，知无不言。
         <br/><br/><br/>
     </div>
+    <div class="info" style="text-align-all: center">
+        <ul>
+            <li><a href="https://github.com/scutpeiliang">Github</a></li>
+            <li><a style="text-align: center" href="http://www.beian.miit.gov.cn/">粤ICP备19109009号</a></li>
+        </ul>
+    </div>
     <div class="info">
         <p style="text-align: center;font-size: 16px;">统计信息</p>
         <ul >
             <li>注册用户数: ${usersNum}</li>
             <li>帖子数: ${topicsNum}</li>
-        </ul>
-    </div>
-    <div class="info">
-        <p style="text-align: center;font-size: 16px;">友情链接</p>
-        <ul>
-            <li><a href="https://github.com/scutpeiliang">我的Github</a></li>
         </ul>
     </div>
 </footer>

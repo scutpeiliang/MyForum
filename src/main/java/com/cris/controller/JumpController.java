@@ -127,4 +127,12 @@ public class JumpController {
     public String jumpToAddTab(){
         return "admin/tab/add";
     }
+
+    /**
+     * 跳转到404页面
+     */
+    @RequestMapping("/404")
+    public String jumpTo404 () {
+        return "404";
+    }
 }

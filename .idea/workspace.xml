@@ -9,7 +9,38 @@
     <list default="true" id="fb05dd4a-ced7-4eb0-90d4-75179df484e8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web/MyForum_Web.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web/MyForum_Web.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userAvatar/10100625-11fc-42ed-83b4-ca2d72158bcf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/JumpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/JumpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/mapper/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/mapper/TopicMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/option.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/option.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/reply/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/reply/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/tab/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/tab/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/tab/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/tab/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/topic/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/topic/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/signin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/controller/JumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/controller/JumpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/option.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/option.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/reply/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/reply/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/tab/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/tab/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/tab/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/tab/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/topic/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/topic/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/controller/JumpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/controller/JumpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TopicMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,13 +98,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1Pobu9A6ria8zaGCOygzSXPCMxV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/tab" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -259,6 +293,10 @@
       <workItem from="1566751235898" duration="297000" />
       <workItem from="1566791396306" duration="29199000" />
       <workItem from="1566875957449" duration="460000" />
+      <workItem from="1581924001896" duration="6792000" />
+      <workItem from="1581932310820" duration="25000" />
+      <workItem from="1581932591839" duration="290000" />
+      <workItem from="1581937930688" duration="1930000" />
     </task>
     <servers />
   </component>
@@ -270,7 +308,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

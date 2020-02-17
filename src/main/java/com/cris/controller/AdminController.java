@@ -50,7 +50,7 @@ public class AdminController {
     /**
      * 查询所有帖子板块
      */
-    @RequestMapping("/listAllTabs")
+    @RequestMapping("/check/listAllTabs")
     public String listAllTabs(Model model){
         List<Tab> tabList = adminService.listAllTabs();
         model.addAttribute("tabList", tabList);
@@ -60,7 +60,7 @@ public class AdminController {
     /**
      * 增加一个帖子板块
      */
-    @RequestMapping("/addTab")
+    @RequestMapping("/check/addTab")
     public String addTab(HttpServletRequest request, Model model){
         //获取参数并封装tab对象
         String tabName = request.getParameter("tabName");
@@ -79,7 +79,7 @@ public class AdminController {
     /**
      * 查询某板块下的所有帖子
      */
-    @RequestMapping("/listTopicsOfTab")
+    @RequestMapping("/check/listTopicsOfTab")
     public String listTopicsOfTab(HttpServletRequest request, Model model) throws UnsupportedEncodingException {
         //获取参数，封装Tab对象
         String tabName = request.getParameter("tabName");
@@ -96,7 +96,7 @@ public class AdminController {
     /**
      * 查询某帖子下的所有回复
      */
-    @RequestMapping("/listRepliesOfTopic")
+    @RequestMapping("/check/listRepliesOfTopic")
     public String listRepliesOfTopic(HttpServletRequest request, Model model){
         int topicId = Integer.parseInt(request.getParameter("topicId"));
         //查询该帖子下所有回复
@@ -110,7 +110,7 @@ public class AdminController {
     /**
      * 查询所有已注册用户
      */
-    @RequestMapping("/listAllUsers")
+    @RequestMapping("/check/listAllUsers")
     public String listAllUsers(Model model){
         //查询所有已注册用户
         List<User> userList = adminService.listAllUsers();
@@ -122,7 +122,7 @@ public class AdminController {
     /**
      * 查询登录日志
      */
-    @RequestMapping("/listLog")
+    @RequestMapping("/check/listLog")
     public String listLog(Model model){
         //查询登录日志
         List<LoginLog> logList = adminService.listLog();
@@ -134,7 +134,7 @@ public class AdminController {
     /**
      * 删除一条回复
      */
-    @RequestMapping("/deleteOneReply")
+    @RequestMapping("/check/deleteOneReply")
     public String deleteOneReply(HttpServletRequest request){
         //获取帖子id
         int topicId = Integer.parseInt(request.getParameter("topicId"));
@@ -143,32 +143,32 @@ public class AdminController {
         //删除回复
         adminService.deleteOneReply(id);
         //重定向回原帖子
-        return "redirect:/admin/listRepliesOfTopic?topicId=" + topicId;
+        return "redirect:/admin/check/listRepliesOfTopic?topicId=" + topicId;
     }
 
     /**
      * 删除一个帖子
      */
-    @RequestMapping("/deleteOneTopic")
+    @RequestMapping("/check/deleteOneTopic")
     public String deleteOneTopic(HttpServletRequest request){
         //获取帖子id
         int id = Integer.parseInt(request.getParameter("id"));
         //删除帖子
         adminService.deleteOneTopic(id);
         //重定向回板块页面
-        return "redirect:/admin/listAllTabs";
+        return "redirect:/admin/check/listAllTabs";
     }
 
     /**
      * 删除一个板块
      */
-    @RequestMapping("/deleteOneTab")
+    @RequestMapping("/check/deleteOneTab")
     public String deleteOneTab(HttpServletRequest request){
         //获取板块名
         String tabName = request.getParameter("tabName");
         //删除板块
         adminService.deleteOneTab(tabName);
         //重定向回板块页面
-        return "redirect:/admin/listAllTabs";
+        return "redirect:/admin/check/listAllTabs";
     }
 }
