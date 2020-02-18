@@ -87,8 +87,7 @@ public class JumpController {
         //查询总用户数
         int usersNum = userService.selectUserNum();
         //查询总帖子数
-        List<Topic> topicList = topicService.selectAllTopics();
-        int topicsNum = topicList.size();
+        int topicsNum = topicService.selectTotalTopicsNum();
         //查询热议帖子
         List<Topic> hotTopicList = topicService.selectHotTopics();
         //数据添加到model中

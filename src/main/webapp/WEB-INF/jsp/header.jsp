@@ -9,7 +9,7 @@
             success:function (data) {
                 for(var i = 0; i < data.length; i++){
                     var tab = data[i];
-                    $("#tabList").append("<li><a href=" + "/topicsOfTab?id=" + tab.tabId + ">" + tab.tabName + "</a></li>");
+                    $("#tabList").append("<li><a href=" + "/topicsOfTab?id=" + tab.tabId + "&page=1>" + tab.tabName + "</a></li>");
                 }
             }
         });

@@ -53,16 +53,6 @@
 
         <c:if test="${replyList != null}">
             <div class="panel panel-default" id="main" style="">
-                <div class="panel-heading" style="background-color: white">
-                    <span>
-                        ${fn:length(replyList)} 回复  |  直到
-                            <c:forEach items="${replyList}" var="reply" varStatus="status">
-                                <c:if test="${status.last}">
-                                    ${reply.localCreateTime}
-                                </c:if>
-                            </c:forEach>
-                    </span>
-                </div>
 
                 <ul class="list-group" style="width: 100%">
                 <!-- 遍历评论 -->
@@ -89,6 +79,24 @@
                 </ul>
             </div>
         </c:if>
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="/topicDetail?id=${topic.id}&page=1" aria-label="Previous">
+                        <span aria-hidden="true">首页</span>
+                    </a>
+                </li>
+                <c:forEach items="${page.pages}" var="p">
+                    <li><a href="/topicDetail?id=${topic.id}&page=${p}">${p}</a></li>
+                </c:forEach>
+                <li>
+                    <a href="/topicDetail?id=${topic.id}&page=${page.totalPage}" aria-label="Next">
+                        <span aria-hidden="true">尾页</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
         <c:if test="${user != null}">
             <div class="panel panel-default" id="main" style="">

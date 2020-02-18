@@ -1,5 +1,6 @@
 package com.cris.service;
 
+import com.cris.domain.Page;
 import com.cris.domain.Reply;
 import com.cris.domain.Topic;
 import org.springframework.transaction.annotation.Propagation;
@@ -11,12 +12,6 @@ import java.util.List;
  * 帖子相关
  */
 public interface TopicService {
-
-    /**
-     * 查询所有帖子
-     */
-    public List<Topic> selectAllTopics();
-
     /**
      * 查询热议帖子
      */
@@ -33,14 +28,14 @@ public interface TopicService {
     public void clickIncrease(int id);
 
     /**
-     * 查询某帖子下的所有回复
+     * 分页查询特定帖子的回复
      */
-    public List<Reply> selectAllRepliesById(int id);
+    public Page<Reply> selectRepliesOfTopic(Page page);
 
     /**
-     * 查询特定板块的所有帖子
+     * 分页查询特定板块的帖子
      */
-    public List<Topic> selectTopicsOfTab(int tabId);
+    public Page<Topic> selectTopicsOfTab(Page page);
 
     /**
      * 完成发帖和发帖用户积分增加，需要配置事务
@@ -53,4 +48,9 @@ public interface TopicService {
      */
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     public void deleteTopic(int topicId);
+
+    /**
+     * 查询帖子总数
+     */
+    public int selectTotalTopicsNum();
 }

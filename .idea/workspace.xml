@@ -7,40 +7,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb05dd4a-ced7-4eb0-90d4-75179df484e8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MyForum_Web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MyForum_Web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MyForum_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MyForum_Web_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyForum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MyForum.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web/MyForum_Web.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web/MyForum_Web.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/META-INF/MyForum.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/JumpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/JumpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/ReplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/TopicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/TopicController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/dao/TabDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/dao/TabDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/dao/TopicDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/dao/TopicDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/service/TopicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/service/TopicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/service/impl/TopicServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/com/cris/service/impl/TopicServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/mapper/TabMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/mapper/TabMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/mapper/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/mapper/TopicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/option.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/option.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/reply/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/reply/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/tab/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/tab/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/tab/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/tab/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/topic/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/admin/topic/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/signin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/cate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/cate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyForum_Web_exploded/WEB-INF/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/controller/JumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/controller/JumpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/controller/ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/controller/ReplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/controller/TopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/controller/TopicController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/dao/TabDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/dao/TabDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/dao/TopicDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/dao/TopicDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/service/TopicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/service/TopicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cris/service/impl/TopicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cris/service/impl/TopicServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TabMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TabMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TopicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/option.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/option.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/reply/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/reply/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/tab/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/tab/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/tab/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/tab/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/topic/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/topic/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/cate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/cate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MyForum.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cris/controller/JumpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/controller/JumpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/controller/ReplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/controller/TopicController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/controller/TopicController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cris/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/dao/TabDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/dao/TabDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/dao/TopicDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/dao/TopicDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/service/TopicService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/service/TopicService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cris/service/impl/TopicServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cris/service/impl/TopicServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TabMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TabMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/TopicMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TopicMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,13 +86,14 @@
         <option value="Arquillian JUnit Test Class" />
         <option value="Interface" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -98,7 +116,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1Pobu9A6ria8zaGCOygzSXPCMxV" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
@@ -118,7 +136,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2039801" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -141,6 +159,13 @@
       <recent name="E:\IdeaSpace\MyForum\src\main\webapp\static\img\cartoon" />
       <recent name="E:\IdeaSpace\MyForum\src\main\webapp" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn pac" />
+      <command value="mvn package" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -190,21 +215,21 @@
     <configuration name="Tomcat 9.0.223" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.223" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <file path="$PROJECT_DIR$/userAvatar">
-          <settings>
-            <option name="CONTEXT_PATH" value="/userAvatar" />
-          </settings>
-        </file>
         <artifact name="MyForum:Web">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
+        <file path="$PROJECT_DIR$/userAvatar">
+          <settings>
+            <option name="CONTEXT_PATH" value="/userAvatar" />
+          </settings>
+        </file>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_MyForum_3" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_myforum_4" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -212,7 +237,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="62304" />
+        <option name="DEBUG_PORT" value="54451" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -266,6 +291,11 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.TopicServiceImplTest.testAddTopic" />
+      <item itemvalue="JUnit.TopicServiceImplTest.testDeleteTopic" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.223" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TopicServiceImplTest.testAddTopic" />
@@ -297,6 +327,15 @@
       <workItem from="1581932310820" duration="25000" />
       <workItem from="1581932591839" duration="290000" />
       <workItem from="1581937930688" duration="1930000" />
+      <workItem from="1582004000475" duration="35000" />
+      <workItem from="1582012735868" duration="10066000" />
+      <workItem from="1582024489507" duration="5725000" />
+      <workItem from="1582032665546" duration="5813000" />
+      <workItem from="1582039301482" duration="6211000" />
+      <workItem from="1582045527232" duration="377000" />
+      <workItem from="1582046319920" duration="1291000" />
+      <workItem from="1582047671779" duration="1885000" />
+      <workItem from="1582050365317" duration="654000" />
     </task>
     <servers />
   </component>
@@ -315,5 +354,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/MyForum" />
+    </ignored-roots>
   </component>
 </project>

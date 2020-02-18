@@ -77,7 +77,7 @@
                             <img width="50px" height="50px" src="/userAvatar/${topic.user.avatar}" class="img-rounded">
                         </div>
                         <div style="width: 89%;float: left">
-                            <a href="/topicDetail?id=${topic.id}">${topic.title}</a><br/>
+                            <a href="/topicDetail?id=${topic.id}&page=1">${topic.title}</a><br/>
                             <div>
                                 <a><span class="label label-default" >${topic.tab.tabName}</span></a>&nbsp;&nbsp;&nbsp;
                                 <a href="/userInfo?id=${topic.user.id}"><span ><strong>${topic.user.username}</strong></span></a>&nbsp;&nbsp;&nbsp;
@@ -94,6 +94,24 @@
                 </li>
             </c:forEach>
         </ul>
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="/topicsOfTab?id=${page.id}&page=1" aria-label="Previous">
+                        <span aria-hidden="true">首页</span>
+                    </a>
+                </li>
+                <c:forEach items="${page.pages}" var="p">
+                    <li><a href="/topicsOfTab?id=${page.id}&page=${p}">${p}</a></li>
+                </c:forEach>
+                <li>
+                    <a href="/topicsOfTab?id=${page.id}&page=${page.totalPage}" aria-label="Next">
+                        <span aria-hidden="true">尾页</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
     </div>
 </c:if>

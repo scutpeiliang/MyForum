@@ -145,7 +145,7 @@ public class UserController {
         String newAvatar = uuid + postfix;
         //完成新头像的上传，注意：用户自己上传的头像保存在本地，然后设置了虚拟路径，可参考：
         //https://blog.csdn.net/jacksonzhou88/article/details/62508188
-        picture.transferTo(new File("E:/IdeaSpace/MyForum/userAvatar/" + newAvatar));
+        picture.transferTo(new File("/usr/local/tomcat/userAvatar/" + newAvatar));
         //更新用户信息
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");

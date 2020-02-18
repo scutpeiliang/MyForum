@@ -8,6 +8,9 @@
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.4" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.6" />
         </element>
+        <element id="directory" name="classes">
+          <element id="module-output" name="myforum" />
+        </element>
       </element>
     </root>
   </artifact>

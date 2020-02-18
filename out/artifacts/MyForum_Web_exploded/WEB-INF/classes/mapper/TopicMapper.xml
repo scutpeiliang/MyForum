@@ -2,67 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cris.dao.TopicDao" >
 
-    <!--查询所有帖子，包括每个帖子对应的用户、板块信息-->
-    <resultMap id="allTopics" type="topic">
-        <id property="id" column="id"></id>
-        <result property="title" column="title"></result>
-        <result property="createTime" column="create_time"></result>
-        <result property="updateTime" column="update_time"></result>
-        <result property="countReplies" column="countReplies"></result>
-        <association property="user" javaType="user">
-            <id property="id" column="uid"></id>
-            <result property="avatar" column="avatar"></result>
-            <result property="username" column="username"></result>
-        </association>
-        <association property="tab" javaType="tab">
-            <result property="tabName" column="tab_name"></result>
-        </association>
-    </resultMap>
-    <select id="selectAllTopics" resultMap="allTopics">
-        select t.id, t.title, t.create_time, t.update_time, u.id as uid, u.avatar, u.username, ta.tab_name,count(r.id) as countReplies
-        from topic t
-        left join user u
-        on t.user_id = u.id
-        left join tab ta
-        on t.tab_id = ta.id
-        left join reply r
-        on t.id = r.topic_id
-        group by t.id
-        order by t.create_time
-        desc
-    </select>
-
-    <!--查询特定板块的所有帖子，包括每个帖子对应的用户、板块信息-->
-    <resultMap id="topicsOfTab" type="topic">
-        <id property="id" column="id"></id>
-        <result property="title" column="title"></result>
-        <result property="createTime" column="create_time"></result>
-        <result property="updateTime" column="update_time"></result>
-        <result property="countReplies" column="countReplies"></result>
-        <association property="user" javaType="user">
-            <id property="id" column="uid"></id>
-            <result property="avatar" column="avatar"></result>
-            <result property="username" column="username"></result>
-        </association>
-        <association property="tab" javaType="tab">
-            <result property="tabName" column="tab_name"></result>
-        </association>
-    </resultMap>
-    <select id="selectTopicsOfTab" resultMap="topicsOfTab" parameterType="int">
-        select t.id, t.title, t.create_time, t.update_time, u.id as uid, u.avatar, u.username, ta.tab_name,count(r.id) as countReplies
-        from topic t
-        left join user u
-        on t.user_id = u.id
-        left join tab ta
-        on t.tab_id = ta.id
-        left join reply r
-        on t.id = r.topic_id
-        where t.tab_id = #{tabId}
-        group by t.id
-        order by t.update_time
-        desc
-    </select>
-
     <!--查询5条热议帖子-->
     <resultMap id="hotTopics" type="topic">
         <id property="id" column="id"></id>
@@ -103,24 +42,6 @@
         update topic set click = click + 1 where id = #{id}
     </update>
 
-    <!--查询某帖子下的全部回复-->
-    <resultMap id="selectAllReplies" type="reply">
-        <id property="id" column="rid"></id>
-        <result property="createTime" column="create_time"></result>
-        <result property="content" column="content"></result>
-        <association property="user" javaType="user">
-            <id property="id" column="uid"></id>
-            <result property="username" column="username"></result>
-            <result property="avatar" column="avatar"></result>
-        </association>
-    </resultMap>
-    <select id="selectAllRepliesById" parameterType="int" resultMap="selectAllReplies">
-        select r.id as rid, r.create_time, r.content, u.id as uid, u.username, u.avatar
-        from reply r, user u
-        where r.reply_user_id = u.id and r.topic_id = #{id}
-        order by r.create_time
-    </select>
-
     <!--发帖-->
     <insert id="addTopic" parameterType="topic">
         insert into topic (user_id, create_time, title, content, click, tab_id)
@@ -131,4 +52,35 @@
     <delete id="deleteById" parameterType="int">
         delete from topic where id = #{id}
     </delete>
+
+    <!--查询帖子总数-->
+    <select id="selectTotalTopicsNum" resultType="int">
+        select count(id) from topic;
+    </select>
+
+    <!--查询某帖子回复总数-->
+    <select id="selectReplyNumOfTopic" resultType="int" parameterType="int">
+        select count(t.id)
+        from topic t, reply r
+        where t.id = r.topic_id and t.id = #{id}
+    </select>
+
+    <!--分页查询帖子下回复-->
+    <resultMap id="selectReplies" type="reply">
+        <id property="id" column="rid"></id>
+        <result property="createTime" column="create_time"></result>
+        <result property="content" column="content"></result>
+        <association property="user" javaType="user">
+            <id property="id" column="uid"></id>
+            <result property="username" column="username"></result>
+            <result property="avatar" column="avatar"></result>
+        </association>
+    </resultMap>
+    <select id="selectRepliesOfTopic" parameterType="page" resultMap="selectReplies">
+        select r.id as rid, r.create_time, r.content, u.id as uid, u.username, u.avatar
+        from reply r, user u
+        where r.reply_user_id = u.id and r.topic_id = #{id}
+        order by r.create_time
+        limit #{index}, #{pageSize}
+    </select>
 </mapper>

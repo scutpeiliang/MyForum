@@ -1,9 +1,6 @@
 package com.cris.controller;
 
-import com.cris.domain.Reply;
-import com.cris.domain.Tab;
-import com.cris.domain.Topic;
-import com.cris.domain.User;
+import com.cris.domain.*;
 import com.cris.service.TopicService;
 import com.cris.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +28,12 @@ public class TopicController {
      */
     @RequestMapping("/")
     public String toCate(Model model){
-        //查询所有帖子
-        List<Topic> topicList = topicService.selectAllTopics();
-        if(topicList.size() != 0){
-            model.addAttribute("topicList", topicList);
+        //分页查询帖子
+        Page<Topic> page = new Page<>(1, 10, 0);  //id=0表示查询所有分类的帖子
+        page = topicService.selectTopicsOfTab(page);
+        if(page.getList().size() != 0){
+            model.addAttribute("topicList", page.getList());
+            model.addAttribute("page", page);
         }
         //准备其他数据
         model = prepare(model);
@@ -43,12 +42,14 @@ public class TopicController {
     }
 
     /**
-     * 查看帖子详情。准备数据，跳转到帖子详情页面进行显示
+     * 分页查看帖子详情
      */
     @RequestMapping("/topicDetail")
     public String topicDetail(HttpServletRequest request, HttpServletResponse response, Model model){
         //获取帖子id
         int id = Integer.parseInt(request.getParameter("id"));
+        //获取查询页数
+        int p = Integer.parseInt(request.getParameter("page"));
         //根据id查询该帖子的详细信息
         Topic topic = topicService.selectTopicById(id);
         //查询到帖子
@@ -56,10 +57,12 @@ public class TopicController {
             //点击量+1
             topic.setClick(topic.getClick() + 1);
             topicService.clickIncrease(id);
-            //查询该帖子下的所有回复
-            List<Reply> replyList = topicService.selectAllRepliesById(id);
+            //分页查询该帖子下的回复
+            Page<Reply> page = new Page<>(p, 10, id);
+            page = topicService.selectRepliesOfTopic(page);
             model.addAttribute("topic", topic);
-            model.addAttribute("replyList", replyList);
+            model.addAttribute("page", page);
+            model.addAttribute("replyList", page.getList());
             //准备其他数据
             model = prepare(model);
             //转到详情页面显示
@@ -72,18 +75,20 @@ public class TopicController {
     }
 
     /**
-     * 查看特定板块的所有帖子
+     * 分页查看板块下的帖子
      */
-    @RequestMapping("topicsOfTab")
+    @RequestMapping("/topicsOfTab")
     public String topicsOfTab(HttpServletRequest request, Model model){
-        //查询该板块下的所有帖子
         int tabId = Integer.parseInt(request.getParameter("id"));
-        List<Topic> topicList = topicService.selectTopicsOfTab(tabId);
+        int p = Integer.parseInt(request.getParameter("page"));
+        Page<Topic> page = new Page<>(p, 10, tabId);
+        page = topicService.selectTopicsOfTab(page);
         Tab tab = new Tab();
         tab.setId(tabId);
-        if(topicList.size() != 0){
+        if(page.getList().size() != 0){
             //该模块下有帖子
-            model.addAttribute("topicList", topicList);
+            model.addAttribute("topicList", page.getList());
+            model.addAttribute("page", page);
         }
         model.addAttribute("tab", tab);
         //准备其他数据
@@ -99,8 +104,7 @@ public class TopicController {
         //查询总用户数
         int usersNum = userService.selectUserNum();
         //查询总帖子数
-        List<Topic> topicList = topicService.selectAllTopics();
-        int topicsNum = topicList.size();
+        int topicsNum = topicService.selectTotalTopicsNum();
         //查询热议帖子
         List<Topic> hotTopicList = topicService.selectHotTopics();
         //数据添加到model中

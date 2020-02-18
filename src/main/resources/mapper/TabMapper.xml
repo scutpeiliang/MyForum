@@ -11,4 +11,45 @@
         select id, tab_name from tab
     </select>
 
+    <!--查询某板块下帖子总数-->
+    <select id="selectTopicsNumByTabId" parameterType="int" resultType="int">
+        select count(id) from topic
+        <if test="id != 0">
+            where tab_id = #{id}
+        </if>
+    </select>
+
+    <!--分页查询某板块下帖子-->
+    <resultMap id="topicsOfTab" type="topic">
+        <id property="id" column="id"></id>
+        <result property="title" column="title"></result>
+        <result property="createTime" column="create_time"></result>
+        <result property="updateTime" column="update_time"></result>
+        <result property="countReplies" column="countReplies"></result>
+        <association property="user" javaType="user">
+            <id property="id" column="uid"></id>
+            <result property="avatar" column="avatar"></result>
+            <result property="username" column="username"></result>
+        </association>
+        <association property="tab" javaType="tab">
+            <result property="tabName" column="tab_name"></result>
+        </association>
+    </resultMap>
+    <select id="selectTopicsOfTab" resultMap="topicsOfTab" parameterType="page">
+        select t.id, t.title, t.create_time, u.id as uid, u.avatar, u.username, ta.tab_name,count(r.id) as countReplies
+        from topic t
+        left join user u
+        on t.user_id = u.id
+        left join tab ta
+        on t.tab_id = ta.id
+        left join reply r
+        on t.id = r.topic_id
+        <if test="id != 0">
+            where t.tab_id = #{id}
+        </if>
+        group by t.id
+        order by t.create_time desc
+        limit #{index}, #{pageSize}
+    </select>
+
 </mapper>
