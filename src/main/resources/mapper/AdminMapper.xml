@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cris.dao.AdminDao" >
 
@@ -92,23 +92,23 @@
     </select>
 
     <!--删除一条回复-->
-    <delete id="deleteOneReply" parameterType="int">
-        delete from reply where id = #{id}
-    </delete>
+    <update id="deleteOneReply" parameterType="int">
+        update reply set status = 1 where id = #{id}
+    </update>
 
     <!--删除某帖子下的所有回复-->
-    <delete id="deleteAllRepliesOfTopic" parameterType="int">
-        delete from reply where topic_id = #{topicId}
-    </delete>
+    <update id="deleteAllRepliesOfTopic" parameterType="int">
+        update reply set status = 1 where topic_id = #{topicId}
+    </update>
 
     <!--删除一个帖子本身-->
-    <delete id="deleteOneTopic" parameterType="int">
-        delete from topic where id = #{id}
-    </delete>
+    <update id="deleteOneTopic" parameterType="int">
+        update topic set status = 1 where id = #{id}
+    </update>
 
     <!--删除一个板块本身-->
-    <delete id="deleteOneTab" parameterType="String">
-        delete from tab where tab_name = #{tabName}
-    </delete>
+    <update id="deleteOneTab" parameterType="String">
+        update tab set status = 1 where tab_name = #{tabName}
+    </update>
 
 </mapper>

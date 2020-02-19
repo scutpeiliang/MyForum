@@ -8,14 +8,15 @@
         <result property="tabName" column="tab_name"></result>
     </resultMap>
     <select id="selectAllTabs" resultMap="allTabs">
-        select id, tab_name from tab
+        select id, tab_name from tab where status != 1
     </select>
 
     <!--查询某板块下帖子总数-->
     <select id="selectTopicsNumByTabId" parameterType="int" resultType="int">
         select count(id) from topic
+        where status != 1
         <if test="id != 0">
-            where tab_id = #{id}
+            and tab_id = #{id}
         </if>
     </select>
 
@@ -44,8 +45,11 @@
         on t.tab_id = ta.id
         left join reply r
         on t.id = r.topic_id
+        where t.status != 1
+        and ta.status != 1
+        and r.status != 1
         <if test="id != 0">
-            where t.tab_id = #{id}
+            and t.tab_id = #{id}
         </if>
         group by t.id
         order by t.create_time desc

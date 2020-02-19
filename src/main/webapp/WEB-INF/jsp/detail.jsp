@@ -58,7 +58,7 @@
                 <!-- 遍历评论 -->
                     <c:forEach items="${replyList}" var="reply">
                         <li class="list-group-item">
-                            <div style="height: 50px">
+                            <div style="height: 150px">
                                 <div style="float: left;width: 6%;margin-bottom: 5px">
                                     <img width="50px" height="50px" src="/userAvatar/${reply.user.avatar} " class="img-rounded">
                                 </div>

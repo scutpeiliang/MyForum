@@ -32,7 +32,7 @@
     </div>
     <ul class="list-group" style="width: 100%">
         <c:forEach items="${hotTopicList}" var="hotTopic">
-            <li class="list-group-item"><a href="/topicDetail?id=${hotTopic.id}">${hotTopic.title}</a></li>
+            <li class="list-group-item"><a href="/topicDetail?id=${hotTopic.id}&page=1">${hotTopic.title}</a></li>
         </c:forEach>
     </ul>
 </div>

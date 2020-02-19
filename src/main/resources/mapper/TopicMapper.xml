@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cris.dao.TopicDao" >
 
@@ -12,6 +12,8 @@
         select t.id, t.title, count(r.id) as countReplies
         from topic t left join reply r
         on t.id = r.topic_id
+        where t.status != 1
+        and r.status != 1
         group by t.id
         order by countReplies
         desc
@@ -34,7 +36,7 @@
     <select id="selectTopicById" parameterType="int" resultMap="selectById">
         select t.id, t.title, t.create_time, t.click, t.content, u.id as uid, u.username, u.avatar
         from topic t, user u
-        where t.user_id = u.id and t.id = #{id}
+        where t.user_id = u.id and t.id = #{id} and t.status != 1
     </select>
 
     <!--帖子点击量+1-->
@@ -43,26 +45,26 @@
     </update>
 
     <!--发帖-->
-    <insert id="addTopic" parameterType="topic">
+    <insert id="addTopic" parameterType="topic" useGeneratedKeys="true" keyProperty="id">
         insert into topic (user_id, create_time, title, content, click, tab_id)
         values (#{userId}, #{createTime}, #{title}, #{content}, #{click}, #{tabId})
     </insert>
 
     <!--删帖-->
-    <delete id="deleteById" parameterType="int">
-        delete from topic where id = #{id}
-    </delete>
+    <update id="deleteById" parameterType="int">
+        update topic set status = 1 where id = #{id}
+    </update>
 
     <!--查询帖子总数-->
     <select id="selectTotalTopicsNum" resultType="int">
-        select count(id) from topic;
+        select count(id) from topic where status != 1;
     </select>
 
     <!--查询某帖子回复总数-->
     <select id="selectReplyNumOfTopic" resultType="int" parameterType="int">
         select count(t.id)
         from topic t, reply r
-        where t.id = r.topic_id and t.id = #{id}
+        where t.id = r.topic_id and t.id = #{id} and t.status != 1 and r.status != 1
     </select>
 
     <!--分页查询帖子下回复-->
@@ -79,7 +81,7 @@
     <select id="selectRepliesOfTopic" parameterType="page" resultMap="selectReplies">
         select r.id as rid, r.create_time, r.content, u.id as uid, u.username, u.avatar
         from reply r, user u
-        where r.reply_user_id = u.id and r.topic_id = #{id}
+        where r.reply_user_id = u.id and r.topic_id = #{id} and r.status != 1
         order by r.create_time
         limit #{index}, #{pageSize}
     </select>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.cris.dao.ReplyDao" >
 
@@ -9,12 +9,12 @@
     </insert>
 
     <!--删除一条回复-->
-    <delete id="deleteReply" parameterType="long">
-        delete from reply where id = #{id}
-    </delete>
+    <update id="deleteReply" parameterType="long">
+        update reply set status = 1 where id = #{id}
+    </update>
 
     <!--删除指定帖子下的所有回复-->
-    <delete id="deleteAll" parameterType="int">
-        delete from reply where topic_id = #{topicId}
-    </delete>
+    <update id="deleteAll" parameterType="int">
+        update reply set status = 1 where topic_id = #{topicId}
+    </update>
 </mapper>

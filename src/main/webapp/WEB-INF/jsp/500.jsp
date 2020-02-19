@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>无权限</title>
+    <title>服务器错误</title>
     <style>
         ::-moz-selection {
             background: #b3d4fc;
@@ -143,14 +143,14 @@
 </head>
 <body>
 <div class="container">
-    <h1>403<span>:(</span></h1>
-    <p>对不起，您无权限进行此操作！</p>
-    <p><em id="num">3</em>秒后，跳转到首页</p>
+    <h1>500<span>:(</span></h1>
+    <p>对不起，服务器开小差啦~</p>
+    <p><em id="num">3</em>秒后，自动跳转到上一页</p>
     <script>
         var i =3;
         function djs() {
             if(i==0){
-                window.location.href='/';
+                window.history.back();
             }
             document.getElementById("num").innerText=i--;
             setTimeout("djs()",1000);

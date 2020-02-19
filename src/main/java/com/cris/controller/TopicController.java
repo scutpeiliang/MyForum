@@ -1,6 +1,7 @@
 package com.cris.controller;
 
 import com.cris.domain.*;
+import com.cris.service.ReplyService;
 import com.cris.service.TopicService;
 import com.cris.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,8 @@ public class TopicController {
     private TopicService topicService;
     @Autowired
     private UserService userService;
+    @Autowired
+    private ReplyService replyService;
 
     /**
      * 准备数据，然后转到主界面cate.jsp显示
@@ -126,13 +129,22 @@ public class TopicController {
         int userId = Integer.parseInt(request.getParameter("userId"));
         Topic topic = new Topic();
         topic.setUserId(userId);
-        topic.setCreateTime(new Date());
+        Date date = new Date();
+        topic.setCreateTime(date);
         topic.setTitle(title);
-        topic.setContent(content);
+        topic.setContent("");
         topic.setClick(0);
         topic.setTabId(Byte.parseByte(tabId + ""));
         //完成发帖
         topicService.addTopic(topic);
+        //自抢二楼
+        Reply reply = new Reply();
+        reply.setReplyUserId(userId);
+        reply.setTopicId(topic.getId());
+        reply.setContent(content);
+        reply.setCreateTime(date);
+        //添加回复
+        replyService.addReply(reply);
         //更新用户积分
         User user = (User) request.getSession().getAttribute("user");
         user.setCredit(user.getCredit() + 10);
